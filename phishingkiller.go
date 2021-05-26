@@ -27,18 +27,6 @@ func init() {
 	rand.Seed(time.Now().UnixNano())
 }
 
-func contain(char string, x string) int {
-	times := 0
-	ans := 0
-	for i := 0; i < len(char); i++ {
-		if char[times] == x[0] {
-			ans = 1
-		}
-		times++
-	}
-	return ans
-}
-
 func flood() {
 	addr := host + ":" + port
 	header := "POST " + page + " HTTP/1.1\r\nHost: " + addr + "\r\n"
